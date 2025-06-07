@@ -1,0 +1,31 @@
+site_name: Template MkDocs
+docs_dir: docs
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: default
+      primary: green
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: green
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+nav:
+  - Conteúdo: index.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+
+extra:
+  generator: false
