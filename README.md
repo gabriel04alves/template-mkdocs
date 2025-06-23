@@ -190,6 +190,22 @@ O template já vem configurado com as seguintes extensões:
 - `search`: Busca integrada na documentação
 - `git-revision-date-localized`: Datas de criação e modificação automáticas
 
+## Uso de MathJax e KaTeX
+
+Este template já inclui suporte a fórmulas matemáticas com MathJax e KaTeX. Os arquivos necessários de JavaScript e CSS são adicionados automaticamente via as opções `extra_javascript` e `extra_css` no `mkdocs.yml`.
+
+Assim, você pode usar sintaxe LaTeX diretamente nos arquivos Markdown para exibir fórmulas matemáticas, sem necessidade de configuração adicional.
+
+Exemplo de uso:
+
+```markdown
+A equação de Euler é $e^{i\pi} + 1 = 0$.
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+```
+
 ## Dicas
 
 - Use headers (`#`, `##`, `###`) para organizar o conteúdo
