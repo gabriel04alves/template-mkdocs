@@ -139,6 +139,34 @@ O deploy é **automático**! Sempre que você fizer push para a branch `main`:
 3. Escolha a branch `gh-pages`
 4. Clique em "Save"
 
+## Privacidade: Google Analytics e Cookies
+
+Este template já vem preparado para Google Analytics (GA4) e banner de consentimento de cookies do Material for MkDocs.
+
+Como configurar:
+
+1. Substitua o ID de medição do GA4 em `mkdocs.yml` (formato `G-XXXXXXXXXX`):
+
+   ```yaml
+   extra:
+     analytics:
+       provider: google
+       property: G-SEU_ID_AQUI
+     consent:
+       title: "Aceitar os cookies"
+       description: >-
+         Utilizamos cookies para melhorar sua experiência e analisar o uso
+         da documentação. :)
+   ```
+
+2. O banner de consentimento (seção `extra.consent`) é exibido automaticamente e o Analytics só é carregado após o usuário aceitar.
+
+3. Personalize o texto do banner alterando `title` e `description` conforme sua necessidade (LGPD/GDPR).
+
+4. Para desativar o Analytics, remova ou comente o bloco `extra.analytics`.
+
+5. Teste localmente com `mkdocs serve`. O banner deve aparecer na primeira visita. Para testar novamente, limpe os dados do site no navegador.
+
 ## Personalização
 
 ### Cores e tema
@@ -166,6 +194,8 @@ O template já vem configurado com as seguintes extensões:
 - `def_list`: Listas de definição
 - `footnotes`: Notas de rodapé
 - `toc`: Índice automático com links permanentes
+- `tables`: Tabelas Markdown avançadas
+- `md_in_html`: Permite Markdown dentro de HTML
 
 **PyMdown Extensions:**
 
@@ -179,11 +209,13 @@ O template já vem configurado com as seguintes extensões:
 - `pymdownx.keys`: Representação de teclas
 - `pymdownx.magiclink`: Links automáticos
 - `pymdownx.mark`: Texto marcado
+- `pymdownx.saneheaders`: Cabeçalhos mais previsíveis
 - `pymdownx.smartsymbols`: Símbolos inteligentes
 - `pymdownx.superfences`: Code blocks com anotações
 - `pymdownx.tabbed`: Sistema de abas
 - `pymdownx.tasklist`: Listas de tarefas
 - `pymdownx.tilde`: Texto subscrito e riscado
+- `pymdownx.blocks.caption`: Legendas para blocos (ex.: código, tabelas)
 
 **Plugins:**
 

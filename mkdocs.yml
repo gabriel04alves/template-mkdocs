@@ -3,36 +3,50 @@ docs_dir: docs
 
 nav:
   - Conteúdo: index.md
+  - Nova Página: new_page.md
 
 theme:
   name: material
-  language: pt
+  language: pt-BR
+  favicon: public/favicon.svg
   icon:
-    logo: fontawesome/solid/book
+    logo: fontawesome/solid/file-code
     repo: fontawesome/brands/github
+    annotation: material/arrow-right-circle
+
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: green
-      accent: lime
+      primary: black
+      accent: light blue
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: green
-      accent: lime
+      primary: black
+      accent: light blue
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+
   font:
+    text: Lato
     code: "JetBrains Mono"
+
   features:
-    - navigation.top
-    - navigation.indexes
-    - content.code.annotate
+    - navigation.top # Mostra a barra de navegação no topo da página
+    - navigation.indexes # Adiciona uma página de índices de navegação
+    - navigation.footer # Adiciona links no rodapé
+    - content.code.annotate # Permite anotar linhas de código
+    - toc.integrate # Integra a tabela de conteúdos na barra lateral
+    - header.autohide # Esconde o cabeçalho ao rolar para baixo
+    - search.suggestions # Sugestões de pesquisa
+    - search.highlight # Destaque de pesquisa
+    - search.shared # Pesquisa compartilhada
+    - navigation.tabs # Adiciona abas de navegação
 
 markdown_extensions:
   - abbr
@@ -71,12 +85,20 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - tables
 
 plugins:
   - search
-  - git-revision-date-localized:
-      enable_creation_date: true
-      fallback_to_build_date: true
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     fallback_to_build_date: true
+  - glightbox
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -87,3 +109,13 @@ extra_javascript:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra:
+  analytics:
+    provider: google
+    property: G-RS6649M9GY #TODO: substituir pelo ID pessoal / mover para variáveis de ambiente
+  consent:
+    title: "Aceitar os cookies"
+    description: >-
+      Utilizamos cookies para melhorar sua experiência e analisar o uso
+      da documentação. :)
