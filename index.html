@@ -1,0 +1,1005 @@
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="new_page/">
+      
+      
+      <link rel="icon" href="public/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Template MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-RS6649M9GY"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-RS6649M9GY",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-RS6649M9GY",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#template-mkdocs" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="." title="Template MkDocs" class="md-header__button md-logo" aria-label="Template MkDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0zm192 0v128h128zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Template MkDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conteúdo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="light-blue" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Conteúdo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="new_page/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Nova Página
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Template MkDocs" class="md-nav__button md-logo" aria-label="Template MkDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0zm192 0v128h128zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg>
+
+    </a>
+    Template MkDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conteúdo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conteúdo
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-usar-este-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como usar este template
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como usar este template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-criar-novo-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Criar novo repositório
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configuracao-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configuração inicial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instalacao-local-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Instalação local (opcional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do projeto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-conteudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando conteúdo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando conteúdo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adicionando-paginas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adicionando páginas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatacao-suportada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatação suportada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatação suportada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extensoes-markdown-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensões Markdown básicas:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensoes-pymdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensões PyMdown:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugins-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins adicionais:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-no-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy no GitHub Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy no GitHub Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ativando-o-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ativando o GitHub Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacidade-google-analytics-e-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacidade: Google Analytics e Cookies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalização
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personalização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cores-e-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cores e tema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensoes-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensões disponíveis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-mathjax-e-katex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de MathJax e KaTeX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dicas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucao-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução de problemas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="new_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nova Página
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="template-mkdocs"><a href="https://github.com/gabriel04alves/template-mkdocs">Template MkDocs</a><a class="headerlink" href="#template-mkdocs" title="Permanent link">¶</a></h1>
+<p>Um template simples para criar documentações usando MkDocs com tema Material Design e deploy automático no GitHub Pages.</p>
+<h2 id="como-usar-este-template">Como usar este template<a class="headerlink" href="#como-usar-este-template" title="Permanent link">¶</a></h2>
+<h3 id="1-criar-novo-repositorio">1. Criar novo repositório<a class="headerlink" href="#1-criar-novo-repositorio" title="Permanent link">¶</a></h3>
+<ol>
+<li>Clique em "Use this template" no <a href="https://github.com/gabriel04alves/template-mkdocs">repositório no GitHub</a></li>
+<li>Nomeie seu novo repositório</li>
+<li>Clone o repositório para sua máquina local</li>
+</ol>
+<h3 id="2-configuracao-inicial">2. Configuração inicial<a class="headerlink" href="#2-configuracao-inicial" title="Permanent link">¶</a></h3>
+<p>Edite o arquivo <code>mkdocs.yml</code> e altere as seguintes configurações:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Seu Nome da Documentação</span><span class="w"> </span><span class="c1"># Altere aqui</span>
+</code></pre></div>
+<h3 id="3-instalacao-local-opcional">3. Instalação local (opcional)<a class="headerlink" href="#3-instalacao-local-opcional" title="Permanent link">¶</a></h3>
+<p>Para testar localmente antes do deploy:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Criar ambiente virtual (recomendado)</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+
+<span class="c1"># Ativar ambiente virtual</span>
+<span class="c1"># No Linux/macOS:</span>
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+<span class="c1"># No Windows:</span>
+<span class="c1"># .venv\Scripts\activate</span>
+
+<span class="c1"># Instalar dependências</span>
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c1"># Servir localmente</span>
+mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<p>A documentação estará disponível em <code>http://127.0.0.1:8000</code></p>
+<p><strong>Nota</strong>: O uso de ambiente virtual é altamente recomendado para evitar conflitos de dependências.</p>
+<h2 id="estrutura-do-projeto">Estrutura do projeto<a class="headerlink" href="#estrutura-do-projeto" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>template-mkdocs/
+├── docs/                 # Arquivos de documentação
+│   └── index.md         # Página inicial
+├── .github/workflows/   # GitHub Actions
+│   └── ci.yml          # Deploy automático
+├── mkdocs.yml          # Configuração do MkDocs
+├── requirements.txt    # Dependências Python
+└── README.md           # Este arquivo
+</code></pre></div>
+<h2 id="criando-conteudo">Criando conteúdo<a class="headerlink" href="#criando-conteudo" title="Permanent link">¶</a></h2>
+<h3 id="adicionando-paginas">Adicionando páginas<a class="headerlink" href="#adicionando-paginas" title="Permanent link">¶</a></h3>
+<ol>
+<li>Crie novos arquivos <code>.md</code> na pasta <code>docs/</code></li>
+<li>Adicione as páginas no <code>mkdocs.yml</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Início</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Sobre</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sobre.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Guias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guias.md</span>
+</code></pre></div>
+<h3 id="formatacao-suportada">Formatação suportada<a class="headerlink" href="#formatacao-suportada" title="Permanent link">¶</a></h3>
+<p>Este template inclui diversas extensões para formatação avançada:</p>
+<h4 id="extensoes-markdown-basicas">Extensões Markdown básicas:<a class="headerlink" href="#extensoes-markdown-basicas" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Admonitions</strong>: Caixas de aviso, dica, erro, etc.</li>
+<li><strong>Syntax highlighting</strong>: Destaque de código com Pygments</li>
+<li><strong>Tables</strong>: Tabelas com suporte a alinhamento</li>
+<li><strong>Footnotes</strong>: Notas de rodapé</li>
+<li><strong>Abbreviations</strong>: Abreviações com tooltips</li>
+<li><strong>Definition lists</strong>: Listas de definição</li>
+</ul>
+<h4 id="extensoes-pymdown">Extensões PyMdown:<a class="headerlink" href="#extensoes-pymdown" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Tabbed</strong>: Abas para organizar conteúdo</li>
+<li><strong>Details</strong>: Seções recolhíveis</li>
+<li><strong>Emoji</strong>: Suporte a emojis <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f604.svg" title=":smile:"></li>
+<li><strong>Keys</strong>: Representação de teclas <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span></li>
+<li><strong>Math</strong>: Fórmulas matemáticas com MathJax</li>
+<li><strong>Task lists</strong>: Listas de tarefas com checkboxes</li>
+<li><strong>Superfences</strong>: Code blocks avançados com anotações</li>
+</ul>
+<h4 id="plugins-adicionais">Plugins adicionais:<a class="headerlink" href="#plugins-adicionais" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Search</strong>: Busca integrada</li>
+<li><strong>Git revision date</strong>: Data de criação e modificação dos arquivos</li>
+</ul>
+<p>Exemplo de admonition:</p>
+<div class="highlight"><pre><span></span><code>!!! note "Nota"
+Este é um exemplo de caixa de nota.
+
+!!! warning "Atenção"
+Cuidado com esta configuração!
+</code></pre></div>
+<p>Exemplo de abas:</p>
+<div class="highlight"><pre><span></span><code>=== "Python"
+`python
+    print("Hello World")
+    `
+
+=== "JavaScript"
+`javascript
+    console.log("Hello World");
+    `
+</code></pre></div>
+<h2 id="deploy-no-github-pages">Deploy no GitHub Pages<a class="headerlink" href="#deploy-no-github-pages" title="Permanent link">¶</a></h2>
+<p>O deploy é <strong>automático</strong>! Sempre que você fizer push para a branch <code>main</code>:</p>
+<ol>
+<li>O GitHub Actions será executado</li>
+<li>A documentação será construída usando ambiente virtual</li>
+<li>Os arquivos serão publicados na branch <code>gh-pages</code></li>
+<li>Sua documentação estará disponível em: <code>https://seuusuario.github.io/nome-do-repo</code></li>
+</ol>
+<h3 id="ativando-o-github-pages">Ativando o GitHub Pages<a class="headerlink" href="#ativando-o-github-pages" title="Permanent link">¶</a></h3>
+<ol>
+<li>Vá em Settings → Pages no seu repositório</li>
+<li>Em "Source", selecione "Deploy from a branch"</li>
+<li>Escolha a branch <code>gh-pages</code></li>
+<li>Clique em "Save"</li>
+</ol>
+<h2 id="privacidade-google-analytics-e-cookies">Privacidade: Google Analytics e Cookies<a class="headerlink" href="#privacidade-google-analytics-e-cookies" title="Permanent link">¶</a></h2>
+<p>Este template já vem preparado para Google Analytics (GA4) e banner de consentimento de cookies do Material for MkDocs.</p>
+<p>Como configurar:</p>
+<ol>
+<li>Substitua o ID de medição do GA4 em <code>mkdocs.yml</code> (formato <code>G-XXXXXXXXXX</code>):</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">analytics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">google</span>
+<span class="w">    </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">G-SEU_ID_AQUI</span>
+<span class="w">  </span><span class="nt">consent</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Aceitar</span><span class="nv"> </span><span class="s">os</span><span class="nv"> </span><span class="s">cookies"</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">      </span><span class="no">Utilizamos cookies para melhorar sua experiência e analisar o uso</span>
+<span class="w">      </span><span class="no">da documentação. :)</span>
+</code></pre></div>
+<ol>
+<li>
+<p>O banner de consentimento (seção <code>extra.consent</code>) é exibido automaticamente e o Analytics só é carregado após o usuário aceitar.</p>
+</li>
+<li>
+<p>Personalize o texto do banner alterando <code>title</code> e <code>description</code> conforme sua necessidade (LGPD/GDPR).</p>
+</li>
+<li>
+<p>Para desativar o Analytics, remova ou comente o bloco <code>extra.analytics</code>.</p>
+</li>
+<li>
+<p>Teste localmente com <code>mkdocs serve</code>. O banner deve aparecer na primeira visita. Para testar novamente, limpe os dados do site no navegador.</p>
+</li>
+</ol>
+<h2 id="personalizacao">Personalização<a class="headerlink" href="#personalizacao" title="Permanent link">¶</a></h2>
+<h3 id="cores-e-tema">Cores e tema<a class="headerlink" href="#cores-e-tema" title="Permanent link">¶</a></h3>
+<p>Edite o <code>mkdocs.yml</code> para personalizar:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">      </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">green</span><span class="w"> </span><span class="c1"># Mude a cor aqui</span>
+</code></pre></div>
+<p>Cores disponíveis: <code>red</code>, <code>pink</code>, <code>purple</code>, <code>blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>yellow</code>, <code>orange</code></p>
+<h3 id="extensoes-disponiveis">Extensões disponíveis<a class="headerlink" href="#extensoes-disponiveis" title="Permanent link">¶</a></h3>
+<p>O template já vem configurado com as seguintes extensões:</p>
+<p><strong>Markdown Extensions:</strong></p>
+<ul>
+<li><code>abbr</code>: Abreviações com tooltips</li>
+<li><code>admonition</code>: Caixas de aviso, nota, dica</li>
+<li><code>attr_list</code>: Atributos personalizados para elementos</li>
+<li><code>def_list</code>: Listas de definição</li>
+<li><code>footnotes</code>: Notas de rodapé</li>
+<li><code>toc</code>: Índice automático com links permanentes</li>
+<li><code>tables</code>: Tabelas Markdown avançadas</li>
+<li><code>md_in_html</code>: Permite Markdown dentro de HTML</li>
+</ul>
+<p><strong>PyMdown Extensions:</strong></p>
+<ul>
+<li><code>pymdownx.arithmatex</code>: Fórmulas matemáticas</li>
+<li><code>pymdownx.betterem</code>: Melhor formatação de ênfase</li>
+<li><code>pymdownx.caret</code>: Texto sobrescrito</li>
+<li><code>pymdownx.details</code>: Seções recolhíveis</li>
+<li><code>pymdownx.emoji</code>: Suporte a emojis</li>
+<li><code>pymdownx.highlight</code>: Destaque de sintaxe avançado</li>
+<li><code>pymdownx.inlinehilite</code>: Código inline destacado</li>
+<li><code>pymdownx.keys</code>: Representação de teclas</li>
+<li><code>pymdownx.magiclink</code>: Links automáticos</li>
+<li><code>pymdownx.mark</code>: Texto marcado</li>
+<li><code>pymdownx.saneheaders</code>: Cabeçalhos mais previsíveis</li>
+<li><code>pymdownx.smartsymbols</code>: Símbolos inteligentes</li>
+<li><code>pymdownx.superfences</code>: Code blocks com anotações</li>
+<li><code>pymdownx.tabbed</code>: Sistema de abas</li>
+<li><code>pymdownx.tasklist</code>: Listas de tarefas</li>
+<li><code>pymdownx.tilde</code>: Texto subscrito e riscado</li>
+<li><code>pymdownx.blocks.caption</code>: Legendas para blocos (ex.: código, tabelas)</li>
+</ul>
+<p><strong>Plugins:</strong></p>
+<ul>
+<li><code>search</code>: Busca integrada na documentação</li>
+<li><code>git-revision-date-localized</code>: Datas de criação e modificação automáticas</li>
+</ul>
+<h2 id="uso-de-mathjax-e-katex">Uso de MathJax e KaTeX<a class="headerlink" href="#uso-de-mathjax-e-katex" title="Permanent link">¶</a></h2>
+<p>Este template já inclui suporte a fórmulas matemáticas com MathJax e KaTeX. Os arquivos necessários de JavaScript e CSS são adicionados automaticamente via as opções <code>extra_javascript</code> e <code>extra_css</code> no <code>mkdocs.yml</code>.</p>
+<p>Assim, você pode usar sintaxe LaTeX diretamente nos arquivos Markdown para exibir fórmulas matemáticas, sem necessidade de configuração adicional.</p>
+<p>Exemplo de uso:</p>
+<div class="highlight"><pre><span></span><code>A equação de Euler é $e^{i\pi} + 1 = 0$.
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+</code></pre></div>
+<h2 id="dicas">Dicas<a class="headerlink" href="#dicas" title="Permanent link">¶</a></h2>
+<ul>
+<li>Use headers (<code>#</code>, <code>##</code>, <code>###</code>) para organizar o conteúdo</li>
+<li>Coloque imagens na pasta <code>docs/images/</code></li>
+<li>Use ambiente virtual para desenvolvimento local</li>
+<li>Teste localmente com <code>mkdocs serve</code> antes de fazer commit</li>
+<li>O deploy leva alguns minutos para aparecer online</li>
+<li>As datas de criação/modificação são adicionadas automaticamente</li>
+</ul>
+<h2 id="solucao-de-problemas">Solução de problemas<a class="headerlink" href="#solucao-de-problemas" title="Permanent link">¶</a></h2>
+<p><strong>Deploy falhou?</strong></p>
+<ul>
+<li>Verifique se o <code>mkdocs.yml</code> está com sintaxe correta</li>
+<li>Confira se todas as páginas referenciadas no <code>nav</code> existem</li>
+<li>Verifique se o <code>requirements.txt</code> tem todas as dependências</li>
+</ul>
+<p><strong>Página não carrega?</strong></p>
+<ul>
+<li>Aguarde alguns minutos após o deploy</li>
+<li>Verifique se o GitHub Pages está ativado nas configurações do repositório</li>
+</ul>
+<p><strong>Problemas com ambiente virtual?</strong></p>
+<ul>
+<li>Certifique-se de ativar o ambiente virtual antes de instalar dependências</li>
+<li>Use <code>pip install --upgrade pip</code> para atualizar o pip</li>
+<li>No Windows, use <code>python -m pip</code> se houver problemas com <code>pip</code></li>
+</ul>
+<p><strong>Extensões não funcionam?</strong></p>
+<ul>
+<li>Verifique se todas as dependências estão instaladas</li>
+<li>Confirme se a extensão está listada no <code>mkdocs.yml</code></li>
+</ul>
+<hr>
+<p>Feito usando <a href="https://www.mkdocs.org/">MkDocs</a> e <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé">
+        
+        
+          
+          <a href="new_page/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Nova Página">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Nova Página
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Aceitar os cookies</h4>
+<p>Utilizamos cookies para melhorar sua experiência e analisar o uso da documentação. :)</p>
+<input class="md-toggle" type="checkbox" id="__settings">
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceitar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gerenciar configurações</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.annotate", "toc.integrate", "header.autohide", "search.suggestions", "search.highlight", "search.shared", "navigation.tabs"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
